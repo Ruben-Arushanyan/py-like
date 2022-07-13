@@ -1,6 +1,6 @@
 {
   "name": "py-like",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Python-like JavaScript",
   "license": "MIT",
   "homepage": "https://github.com/Ruben-Arushanyan/py-like",
@@ -10,9 +10,9 @@
   },
   "bugs": "https://github.com/Ruben-Arushanyan/py-like/issues",
   "keywords": [
-      "py-like",
-      "python",
-      "javascript"
+    "py-like",
+    "python",
+    "javascript"
   ],
   "author": "Ruben Arushanyan <ruben.arushanyan24@gmail.com> (https://www.linkedin.com/in/ruben-arushanyan-42bba9235/)",
   "main": "src/index.js",
