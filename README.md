@@ -1,10 +1,8 @@
-# Py-Like JS (Python-Like JavaScript)
+# Py-Like (Python-Like JavaScript)
 
-### 🚧🚧🚧
+## Future package of something quite cool :))
 
-Content is under construction.
-
-### 🚧🚧🚧
+If you are a visitor, check back soon.
 
 
 
