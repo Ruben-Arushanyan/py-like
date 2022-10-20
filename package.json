@@ -1,9 +1,9 @@
 {
   "name": "py-like",
   "version": "0.0.3",
-  "description": "Python-like JavaScript",
+  "description": "Py-like is a JavaScript library that allows coding in JavaScript just like in Python. In JavaScript, Py-like provides a Python-like interface for working with data types, structures, and functions.",
   "license": "MIT",
-  "homepage": "https://github.com/Ruben-Arushanyan/py-like",
+  "homepage": "https://ruben-arushanyan.github.io/py-like",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -15,8 +15,15 @@
   },
   "keywords": [
     "py-like",
+    "python-like",
+    "javascript",
     "python",
-    "javascript"
+    "python-in-javascript",
+    "js-python-methods",
+    "js-python-api",
+    "js-python-interface",
+    "js-python-tuple",
+    "js-python-set"
   ],
   "author": {
     "name": "Ruben Arushanyan",
@@ -39,7 +46,7 @@
     "LICENSE",
     "dist/."
   ],
-  "sideEffects": true,
+  "sideEffects": false,
   "devDependencies": {
     "@babel/cli": "^7.18.9",
     "@babel/core": "^7.18.9",
