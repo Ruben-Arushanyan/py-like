@@ -16,14 +16,14 @@ npm install py-like
 
 ## Examples
 
-### In JavaScript
+#### In JavaScript
 ```js
 import {py} from 'py-like'
 
 py('pytnon like').title() // Python Like
 
 ```
-### In Python
+#### In Python
 ```py
 'pytnon like'.title() # Python Like
 ```
