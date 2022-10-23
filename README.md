@@ -1,5 +1,5 @@
-# [Py-like](https://ruben-arushanyan.github.io/py-like)
-> You can find the full documentation on the [website](https://ruben-arushanyan.github.io/py-like)
+# [Py-like](https://py-like.js.org)
+> You can find the full documentation on the [website](https://py-like.js.org)
 
 ## Description
 
@@ -28,11 +28,11 @@ py('hello world').title() // Hello World
 'hello world'.title() # Hello World
 ```
 
-## [Documentation](https://ruben-arushanyan.github.io/py-like)
+## [Documentation](https://py-like.js.org)
 
-- [Introduction](https://ruben-arushanyan.github.io/py-like/docs/introduction)
+- [Introduction](https://py-like.js.org/docs/introduction)
 - str
-    - [title()](https://ruben-arushanyan.github.io/py-like/docs/str/title)
+    - [title()](https://py-like.js.org/docs/str/title)
 
 
 

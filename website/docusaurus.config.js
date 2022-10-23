@@ -17,8 +17,8 @@ const additonalInfo = {
 const config = {
   title: 'Py-like',
   tagline: 'All the Beauty of Python in JavaScript.',
-  url: 'https://ruben-arushanyan.github.io',
-  baseUrl: '/py-like/',
+  url: 'https://py-like.js.org',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'images/favicon.ico',

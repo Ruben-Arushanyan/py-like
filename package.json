@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Py-like is a JavaScript library that allows coding in JavaScript just like in Python. In JavaScript, Py-like provides a Python-like interface for working with data types, structures, and functions.",
   "license": "MIT",
-  "homepage": "https://ruben-arushanyan.github.io/py-like",
+  "homepage": "https://py-like.js.org",
   "main": "index.js",
   "repository": {
     "type": "git",
