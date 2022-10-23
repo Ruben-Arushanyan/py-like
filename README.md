@@ -20,18 +20,19 @@ npm install py-like
 ```js
 import {py} from 'py-like'
 
-py('pytnon like').title() // Python Like
+py('hello world').title() // Hello World
 
 ```
 #### In Python
 ```py
-'pytnon like'.title() # Python Like
+'hello world'.title() # Hello World
 ```
 
 ## [Documentation](https://ruben-arushanyan.github.io/py-like)
 
-- ### [Introduction](https://ruben-arushanyan.github.io/py-like/docs/introduction)
-
+- [Introduction](https://ruben-arushanyan.github.io/py-like/docs/introduction)
+- str
+    - [title()](https://ruben-arushanyan.github.io/py-like/docs/str/title)
 
 
 

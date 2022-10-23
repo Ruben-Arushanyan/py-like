@@ -24,17 +24,18 @@ npm install py-like
 ```js
 import {py} from 'py-like'
 
-py('pytnon like').title() // Python Like
+py('hello world').title() // Hello World
 
 ```
 #### In Python
 ```py
-'pytnon like'.title() # Python Like
+'hello world'.title() # Hello World
 ```
 
 ## References
 
-- ...
-- ...
+- str
+    - [title()](/docs/str/title)
+
 
 
