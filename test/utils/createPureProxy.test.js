@@ -13,17 +13,6 @@ test('createPureProxy', () => {
 
 
 
-    // toPrimitive
-    proxy = createPureProxy({}, hint => hint === 'number' ? 1000 : "2000")
-    expect(() => proxy.x).toThrow('invalid syntax')
-    expect(typeof proxy.toString).toBe('function')
-    expect(proxy.toString()).toBe('2000')
-    expect(String(proxy)).toBe('2000')
-    expect(Number(proxy)).toBe(1000)
-
-
-
-
     // get
     proxy = createPureProxy({
         get(target, property, receiver) {

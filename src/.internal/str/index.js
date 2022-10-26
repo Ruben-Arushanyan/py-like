@@ -1,48 +1,55 @@
 import {createPureProxy} from '../utils/createPureProxy'
-import {getPropInfo} from '../utils/getPropInfo'
 import {attributeError} from '../utils/errors'
+import {resolveGetOperation} from '../utils/resolveOperations'
 import {$string} from 'comfortable/$string'
 
+
+const PUBLIC_API = Object.setPrototypeOf({
+    title: {
+        allowGet: true,
+        allowSet: false,
+        isFunction: true,
+    },
+}, null)
+
 class Str {
-    #value
-    #cValue
+    js_value_original
+    js_value_string
+
     constructor(value) {
-        this.#value = String(value)
-        this.#cValue = $string(this.#value)
+        this.js_value_original = value
+        this.js_value_string = String(value)
     }
 
     title() {
-        return this.#cValue.titleCase()
+        return $string(this.js_value_string).titleCase()
     }
 
-    ['x:y'](info) {
+    js_toPrimitive(hint) {
+        return this.js_value_string
+    }
+
+    ['*'](property) {
         attributeError({
             objectName: 'str',
-            attributeName: info.prop
+            attributeName: property,
+            type: 'no attribute',
         })
     }
-
-    [Symbol.toPrimitive](hint) {
-        return this.#value
-    }
 }
-
 
 
 const str = (value) => {
     const _this = new Str(value)
     return createPureProxy({
         get(target, property, receiver) {
-            const info = getPropInfo(_this, property)
-            if (info.isFunction) {
-                return info.value.bind(_this)
-            } else if(info.isExist) {
-                return info.value
-            } else {
-                return _this['x:y'](info)
-            }
+            return resolveGetOperation({
+                property,
+                PUBLIC_API,
+                _this,
+            })
         }
-    }, _this[Symbol.toPrimitive].bind(_this))
+    })
 }
 
 export {str}

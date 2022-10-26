@@ -1,7 +1,7 @@
 import { PURE_EMPTY_OBJECT } from './constants'
-import {syntaxError} from './errors'
+import { syntaxError } from './errors'
 
-const createPureProxy = (options={}, toPrimitive) => {
+const createPureProxy = (options={}) => {
     const handler = {
         apply(target, thisArg, argumentsList) {
             syntaxError()
@@ -33,6 +33,9 @@ const createPureProxy = (options={}, toPrimitive) => {
         preventExtensions(target) {
             syntaxError()
         },
+        get(target, property, receiver) {
+            syntaxError()
+        },
         set(target, property, value, receiver) {
             syntaxError()
         },
@@ -40,27 +43,9 @@ const createPureProxy = (options={}, toPrimitive) => {
             syntaxError()
         },
         ...options,
-        get(target, property, receiver) {
-            if (toPrimitive) {
-                if (property === Symbol.toPrimitive) {
-                    return toPrimitive
-                }
-                if (property === 'toString') {
-                    return () => toPrimitive('string')
-                }
-                if (property === 'valueOf') {
-                    return () => toPrimitive('number')
-                }
-            }
-            if (options?.get) {
-                return options?.get?.(target, property, receiver)
-            }
-            syntaxError()
-        },
     }
 
-    const proxy = new Proxy(PURE_EMPTY_OBJECT, handler)
-    return proxy
+    return new Proxy(PURE_EMPTY_OBJECT, handler)
 }
 
 export {createPureProxy}
