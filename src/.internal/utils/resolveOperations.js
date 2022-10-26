@@ -30,7 +30,7 @@ export const resolveGetOperation = (options) => {
     }
 
     if (property === 'toString') {
-        return () => _this.js_toPrimitive('number')
+        return () => _this.js_toPrimitive('string')
     }
 
     if (property === 'valueOf') {
