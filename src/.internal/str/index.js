@@ -3,7 +3,7 @@ import {getPropInfo} from '../utils/getPropInfo'
 import {attributeError} from '../utils/errors'
 import {$string} from 'comfortable/$string'
 
-class PyString {
+class Str {
     #value
     #cValue
     constructor(value) {
@@ -29,8 +29,8 @@ class PyString {
 
 
 
-const pyString = (value) => {
-    const _this = new PyString(value)
+const str = (value) => {
+    const _this = new Str(value)
     return createPureProxy({
         get(target, property, receiver) {
             const info = getPropInfo(_this, property)
@@ -45,4 +45,4 @@ const pyString = (value) => {
     }, _this[Symbol.toPrimitive].bind(_this))
 }
 
-export {pyString}
+export {str}
