@@ -1,6 +1,6 @@
 import {createPureProxy} from '../../.packed/.internal/utils/createPureProxy'
 
-test('createPureProxy', () => {
+test('utils - createPureProxy', () => {
     // errors
     let proxy = createPureProxy()
     expect(() => proxy.x).toThrow('invalid syntax')

@@ -4,14 +4,14 @@ import {attributeError} from './errors'
 export const resolveGetOperation = (options) => {
     const {
         property,
-        PUBLIC_API,
+        api,
         _this,
     } = options
 
-    const apiConfig = PUBLIC_API[property]    
+    const propConfig = api[property]    
 
-    if (apiConfig) {
-        const { allowGet, isFunction } = apiConfig
+    if (propConfig) {
+        const { allowGet, isFunction } = propConfig
         if (allowGet) {
             if (isFunction) {
                 return _this[property].bind(_this)

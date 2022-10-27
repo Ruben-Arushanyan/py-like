@@ -1,6 +1,6 @@
 import {getPropInfo} from '../../.packed/.internal/utils/getPropInfo'
 
-test('getPropInfo', () => {
+test('utils - getPropInfo', () => {
     const f = () => {}
     let obj = {
         a: 1,

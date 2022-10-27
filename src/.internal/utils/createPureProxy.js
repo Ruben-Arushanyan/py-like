@@ -1,4 +1,4 @@
-import { PURE_EMPTY_OBJECT } from './constants'
+import { NOOP } from './constants'
 import { syntaxError } from './errors'
 
 const createPureProxy = (options={}) => {
@@ -45,7 +45,7 @@ const createPureProxy = (options={}) => {
         ...options,
     }
 
-    return new Proxy(PURE_EMPTY_OBJECT, handler)
+    return new Proxy(NOOP, handler)
 }
 
 export {createPureProxy}

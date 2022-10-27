@@ -1,6 +1,6 @@
 import {py} from '../../.packed'
 
-test('py - title()', () => {
+test('str.title', () => {
     const str = py('hello world')
     expect(str.title()).toBe('Hello World')
     const title = str.title
